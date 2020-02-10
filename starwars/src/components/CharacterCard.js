@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CharacterBio from './CharacterBio.js';
+import styled from 'styled-components';
+
+//styling
+const ContainerStyling = styled.div`
+    padding: 20px;
+`;
+//end of styling
 
 export default function CharacterCard() {
     const [characters, setCharacters] = useState([]);
@@ -23,12 +30,14 @@ export default function CharacterCard() {
             {characters.map(character => {
 
                 return (
-                    <CharacterBio 
-                        name={character.name}
-                        gender={character.gender}
-                        eye_color={character.eye_color}
-                        birth_year={character.birth_year}
-                    />
+                    <ContainerStyling className='card-container'>
+                        <CharacterBio 
+                            name={character.name}
+                            gender={character.gender}
+                            eye_color={character.eye_color}
+                            birth_year={character.birth_year}
+                        />
+                    </ContainerStyling>
                 );
             })}
         </div>
