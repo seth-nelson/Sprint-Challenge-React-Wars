@@ -24,12 +24,10 @@ export default function CharacterCard() {
 
                 return (
                     <CharacterBio 
-                        key={character.new}
                         name={character.name}
-                        height={character.height}
+                        gender={character.gender}
                         eye_color={character.eye_color}
                         birth_year={character.birth_year}
-                        gender={character.gender}
                     />
                 );
             })}
