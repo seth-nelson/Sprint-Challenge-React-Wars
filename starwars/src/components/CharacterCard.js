@@ -10,7 +10,7 @@ export default function CharacterCard() {
                 .then(response => {
                     const characters = response.data.results
                     setCharacters(characters)
-                    console.log('characters', response.data.results);
+                    console.log(response.data.results);
                 })
                 .catch(error => {
                     console.log('The force is weak with this one', error);
@@ -25,11 +25,11 @@ export default function CharacterCard() {
                 return (
                     <CharacterBio 
                         key={character.new}
-                        name={characters.name}
-                        height={characters.height}
-                        eye_color={characters.eye_color}
-                        birth_year={characters.birth_year}
-                        gender={characters.gender}
+                        name={character.name}
+                        height={character.height}
+                        eye_color={character.eye_color}
+                        birth_year={character.birth_year}
+                        gender={character.gender}
                     />
                 );
             })}
