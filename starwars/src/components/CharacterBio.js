@@ -3,14 +3,11 @@ import React from 'react';
 
 const CharacterBio = props => {
     return (
-        <div class='character-bio'>
-            <h4>Stat 1</h4>
-            <h4>Stat 1</h4>
-            <h4>Stat 1</h4>
-            <h4>Stat 1</h4>
-            <h4>Stat 1</h4>
-            <h4>Stat 1</h4>
-            <h4>Stat 1</h4>
+        <div key={props.new}>
+            <div class='character-bio'>
+                <h2>{props.name}</h2>
+                
+            </div>
         </div>
     );
 };
